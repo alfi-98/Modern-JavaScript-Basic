@@ -94,5 +94,27 @@ intro.printHobbies();
 ```
 💡 After using the arrow function, javascript remembers the ```this``` function. 
 
+👉 Arrow Function does not have the attribute of a constructor 
+- We cannot create a new object of an arrow function which we can do in a normal function.
+Normal Function:
+```
+function Car(name) {
+  this.name = name;
+}
+
+var BMW = new Car('BMW');
+```
+💡 The above code will give no error
+Arrow Function:
+```
+var Car = (name) => {
+  this.name = name;
+}
+
+var BMW = new Car('BMW');
+```
+
+💡 The above code will return an error since Arrow function does not have the property of a constructor i.e it cannot build an object. 
+
 
     
