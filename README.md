@@ -199,6 +199,6 @@ var result = numbers.find( function(currentNumber) {
 
 console.log(result);
 ```
-- In the above code, we took an unsorted array of numbers. Then, we are running a function inside ```find()``` where it iterates the array, ```numbers[]```. In our example, we want the number which is greater than 10. If we look into our array we can see that 20 is the largest number but our code will return ```13``` because while iterating the array the first number that is greater than 10 is printed. The iteration breaks when the function finds the first number which is greater than 10.
+- In the above code, we took an unsorted array of numbers. Then, we are running a function inside ```find()``` where it iterates the array, ```numbers[]```. In our example, we want the number which is greater than 10. If we look into our array we can see that 20 is the largest number but our code will return ```13``` because while iterating the array the first number that is greater than 10 is printed. The iteration breaks when the function finds the first true statement against the given condition.
 
 
