@@ -200,5 +200,34 @@ var result = numbers.find( function(currentNumber) {
 console.log(result);
 ```
 - In the above code, we took an unsorted array of numbers. Then, we are running a function inside ```find()``` where it iterates the array, ```numbers[]```. In our example, we want the number which is greater than 10. If we look into our array we can see that 20 is the largest number but our code will return ```13``` because while iterating the array the first number that is greater than 10 is printed. The iteration breaks when the function finds the first true statement against the given condition.
+- The function inside ```find()``` method can also take currentIndex and arr[] as parameters:
+```
+find( function(currentNumber, currentIndex, arr) {
+
+```
+
+- 👉 Another important aspect of find() method is ```this``` statement. 
+```
+class Student{
+  constructor(name, age){
+    this.name = name;
+    this.age = age;
+  }
+  
+  test(){
+    console.log("Hello");
+  }
+  exampleFunction(){
+    let array  = [1, 2, 3];
+    array.find(function(){
+      this.test();
+    } this);
+  }
+}
+
+let Student = new Student("alfi", 23);
+
+student.exampleFunction();
+```
 
 
