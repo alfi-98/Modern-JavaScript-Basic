@@ -229,7 +229,7 @@ let student = new Student("alfi", 23);
 
 student.exampleFunction();
 ```
-💡 The above code will throw an error. This happends because the ```find()``` method inside our ```exampleFunction()``` cannot locate the this.test() function. By ```this``` it searches for the ```test()``` globally. For this, find() method also takes a second parameter ```this```.
+-  The above code will throw an error. This happends because the ```find()``` method inside our ```exampleFunction()``` cannot locate the this.test() function. By ```this``` it searches for the ```test()``` globally. For this, find() method also takes a second parameter ```this```.
 ```
 exampleFunction(){
     let array  = [1, 2, 3];
@@ -237,6 +237,14 @@ exampleFunction(){
       this.test();
     }, this);
 ```
+💡 However, we can use arrow function to solve this problem. For this, we dont need to use ```this```. 
 
+```
+exampleFunction(){
+    let array  = [1, 2, 3];
+    array.find(() => {
+      this.test();
+    });
+```
 
 
