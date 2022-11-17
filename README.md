@@ -94,4 +94,5 @@ intro.printHobbies();
 ```
 💡 After using the arrow function, javascript remembers the ```this``` function. 
 
+
     
