@@ -259,3 +259,17 @@ console.log(result);
 ```
 The above code returns ```-1```. 
 
+
+# 🏛 Array.filter() method:
+``
+var numbers = [1,2,3,4,5,6,7];
+var result = numbers.filter((currentValue, index, arr) => {
+  return currentValue > 3;
+});
+
+console.log(result);
+```
+- The above code will print: 
+``` [4,5,6,7] ```
+- In the above code, filter() method prints all the numbers that are above 3. This is how it is filtering the array.
+💡 But the ```filter()``` method is not like ```find()``` or ```findIndex()``` methods. Those methods break when the condition is true even if the full array is not iterated. But for filter() method the whole array is traversed. We can understand this property if we change the array into an unsorted array like this: ```var numbers = [11,2,3,34,5,61,7]; ```
