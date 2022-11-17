@@ -6,8 +6,8 @@
 
 
 
-## 👉 Fat Arrow Function
-- A normal function in javascript is:
+## 🏛 Fat Arrow Function
+- 👉 A normal function in javascript is:
 ```
 function name(){
   return "John";
@@ -37,5 +37,61 @@ let name = (n) => console.log(n);
 name("John");
 ```
 
+Multiple paramteres:
+```
+let intro = (name, age) => {
+  console.log(name + " is " + age + " years old");
+ }
 
+intro("John", 23);
+```
+👉 Problem of ```this``` in callback function:
+```
+var intro = {
+    name: "John",
+    hobbies: ["Dog", "Cars", "Travelling"],
+    printHobbies: function(){
+        this.hobbies.forEach(function(hobby){
+            console.log(`${this.name} loves ${hobby}`)
+        });
+    },
+};
 
+intro.printHobbies();
+```
+The above code prints:
+```
+undefined loves Dog
+undefined loves Cars
+undefined loves Travelling
+```
+- In the above code, ```this.name``` cannot find the name attribute since this is inside a callback function. But we can modify the code by saving ```this``` inside a variable outside the callback function. 
+```
+var intro = {
+    name: "John",
+    hobbies: ["Dog", "Cars", "Travelling"],
+    printHobbies: function(){
+        var self = this;
+        this.hobbies.forEach(function(hobby){
+            console.log(`${this.name} loves ${hobby}`)
+        });
+    },
+};
+```
+- This way the above code will give the correct result. But this is not the most efficient way. This is where fat arrow function comes in. By using arrow function we can solve the problem. 
+ ```
+ var intro = {
+    name: "John",
+    hobbies: ["Dog", "Cars", "Travelling"],
+    printHobbies: function(){
+        this.hobbies.forEach( (hobby) => {
+            console.log(`${this.name} loves ${hobby}`)
+        });
+    },
+};
+
+intro.printHobbies();
+```
+💡 After using the arrow function, javascript remembers the ```this``` function. 
+
+    
