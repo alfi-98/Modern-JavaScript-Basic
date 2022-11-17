@@ -221,13 +221,22 @@ class Student{
     let array  = [1, 2, 3];
     array.find(function(){
       this.test();
-    } this);
+    });
   }
 }
 
-let Student = new Student("alfi", 23);
+let student = new Student("alfi", 23);
 
 student.exampleFunction();
 ```
+💡 The above code will throw an error. This happends because the ```find()``` method inside our ```exampleFunction()``` cannot locate the this.test() function. By ```this``` it searches for the ```test()``` globally. For this, find() method also takes a second parameter ```this```.
+```
+exampleFunction(){
+    let array  = [1, 2, 3];
+    array.find(function(){
+      this.test();
+    }, this);
+```
+
 
 
