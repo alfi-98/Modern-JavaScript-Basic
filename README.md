@@ -188,7 +188,7 @@ console.log(type);
 ```
 - The above code will return "young". In the first check if the age is less than 18, then the condition returns ```false``` and goes to another condition, ```(age > 10) ? "child" : "young"```. In our case the second condition returns false and so our code returns ```young```. 
 
-# 🏛 Array.find() method:
+# 🏛 Array find() method:
 - This method returns the value of the first element that passes a test. 
 ```
 var numbers = [10,2,13,4,20,6];
@@ -247,7 +247,7 @@ exampleFunction(){
     });
 ```
 
-# 🏛 Array.findIndex() method:
+# 🏛 Array findIndex() method:
 - If we want to find the index of a number in an array, we can use findIndex() method. Moreover, we can also find if a number exist in an array since ```findIndex()``` returns ```-1``` if a number does not exist.  
 ```
 var numbers = [1,2,3,4,5,6,7];
@@ -260,7 +260,7 @@ console.log(result);
 The above code returns ```-1```. 
 
 
-# 🏛 Array.filter() method:
+# 🏛 Array filter() method:
 ```
 var numbers = [1,2,3,4,5,6,7];
 var result = numbers.filter((currentValue, index, arr) => {
@@ -273,3 +273,21 @@ console.log(result);
 ``` [4,5,6,7] ```
 - In the above code, filter() method prints all the numbers that are above 3. This is how it is filtering the array.
 💡 But the ```filter()``` method is not like ```find()``` or ```findIndex()``` methods. Those methods break when the condition is true even if the full array is not iterated. But for filter() method the whole array is traversed. We can understand this property if we change the array into an unsorted array like this: ```var numbers = [11,2,3,34,5,61,7]; ```
+
+
+# 🏛 Array slice() method:
+- Usually we start indexing our array with 0. However we can also index array from the end with -1. For example:
+
+<img width="290" alt="Screenshot 2022-11-17 at 5 44 54 PM" src="https://user-images.githubusercontent.com/66726759/202437848-969754f6-f711-4537-9af8-d62e2084cd27.png">
+
+- In slice() method, the a portion of the original array is returned from  ```start``` and ```end``` (end indexed number is not included in the new array) parameter that is given to the slice() method. 
+```
+var numbers = [1,2,3,4,5];
+var result = numbers.slice(1, 3)
+
+console.log(result);
+```
+- The above code returns ```[ 2,3 ]```. So, the numbers from index 1 to index 2 is printed and the number in index 3 is not included. If we consider the negative indexing then, slice(1, -2) will also return  ```[ 2,3 ]```. 
+
+ <img width="290" alt="Screenshot 2022-11-17 at 5 54 48 PM" src="https://user-images.githubusercontent.com/66726759/202439745-54176fe8-0401-4b25-a0b0-e86229217585.png">
+
