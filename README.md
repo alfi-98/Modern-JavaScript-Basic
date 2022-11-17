@@ -146,3 +146,14 @@ if(test){
 This code return: ```I am falsy```
 
 - So, in javascript, anything accept ```false``` ```0``` ```-0``` ```0n``` ```""``` ```''``` ``` `` ``` ```null``` ```undefined``` ```Nan``` ```document.all``` will return truthy. 
+
+- Even if we give a space inside cotation will return ```truthy```:
+```
+var test = " ";
+
+if(test){
+  console.log("I am truthy");
+}else {
+  console.log("I am falsy");
+}
+```
