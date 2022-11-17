@@ -247,4 +247,15 @@ exampleFunction(){
     });
 ```
 
+# 🏛 Array.findIndex() method:
+- If we want to find the index of a number in an array, we can use findIndex() method. Moreover, we can also find if a number exist in an array since ```findIndex()``` returns ```-1``` if a number does not exist.  
+```
+var numbers = [1,2,3,4,5,6,7];
+var result = numbers.findIndex((currentValue, index, arr) => {
+  return currentValue > 20;
+});
+
+console.log(result);
+```
+The above code returns ```-1```. 
 
