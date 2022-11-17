@@ -261,7 +261,7 @@ The above code returns ```-1```.
 
 
 # 🏛 Array.filter() method:
-``
+```
 var numbers = [1,2,3,4,5,6,7];
 var result = numbers.filter((currentValue, index, arr) => {
   return currentValue > 3;
