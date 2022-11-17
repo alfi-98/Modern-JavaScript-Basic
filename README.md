@@ -188,6 +188,17 @@ console.log(type);
 ```
 - The above code will return "young". In the first check if the age is less than 18, then the condition returns ```false``` and goes to another condition, ```(age > 10) ? "child" : "young"```. In our case the second condition returns false and so our code returns ```young```. 
 
+# 🏛 Array.find() method:
+- This method returns the value of the first element that passes a test. 
+```
+var numbers = [10,2,13,4,20,6];
 
+var result = numbers.find( function(currentNumber) {
+    return currentNumber > 10;
+});
+
+console.log(result);
+```
+- In the above code, we took an unsorted array of numbers. Then, we are running a function inside ```find()``` where it iterates the array, ```numbers[]```. In our example, we want the number which is greater than 10. If we look into our array we can see that 20 is the largest number but our code will return ```13``` because while iterating the array the first number that is greater than 10 is printed. The iteration breaks when the function finds the first number which is greater than 10.
 
 
