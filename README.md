@@ -3,7 +3,8 @@
 
 📕 Index:
 1. Fat Arrow Function
-
+2. Truthy & Falsy
+3. Ternary Operator
 
 
 ## 🏛 Fat Arrow Function
@@ -157,3 +158,24 @@ if(test){
   console.log("I am falsy");
 }
 ```
+
+# 🏛 Ternary operator:
+```
+var age = 18;
+
+var type;
+if(age >= 18){
+    type = "adult";
+}else{
+    type = "child";
+}
+console.log(type)
+```
+- The above simple code will print "adult". But with ```Ternary Operator``` we can further simplify the above code: 
+```
+var age = 18;
+
+var type = (age >= 18) ? "adult" : "child";
+console.log(type);
+```
+- In the above code, the statement before ```?``` is the condition and the statement after the ```?``` is the value that is being returned. In this example, if the age is above 18 then it will return ```adult``` or else ```child```. So, the statement on the left side of ```:``` returns if the condition is true and the right side is returned if the condition is false. 
