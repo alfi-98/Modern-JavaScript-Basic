@@ -7,7 +7,7 @@
 
 
 ## 👉 Fat Arrow Function
-- A simple function in javascript is:
+- A normal function in javascript is:
 ```
 function name(){
   return "John";
@@ -28,4 +28,14 @@ console.log(name());
 let name = () => "John";
 console.log(name());
 ```
-```💡 Note than we have also removed the ```return``` statement since we have only one return statement. ```
+💡 Note than we have also removed the ```return``` statement since we have only one return statement. In this case we cannot keep the return statement in our code block.
+
+- Incase of handling parameters in fat arrow functions,
+```
+let name = (n) => console.log(n);
+
+name("John");
+```
+
+
+
