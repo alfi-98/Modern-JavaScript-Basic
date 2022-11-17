@@ -179,3 +179,15 @@ var type = (age >= 18) ? "adult" : "child";
 console.log(type);
 ```
 - In the above code, the statement before ```?``` is the condition and the statement after the ```?``` is the value that is being returned. In this example, if the age is above 18 then it will return ```adult``` or else ```child```. So, the statement on the left side of ```:``` returns if the condition is true and the right side is returned if the condition is false. 
+- 👉 We can also use ternary operator for nested conditions.
+```
+var age = 6;
+
+var type = (age >= 18) ? "adult" : (age > 10) ? "child" : "young";
+console.log(type);
+```
+- The above code will return "young". In the first check if the age is less than 18, then the condition returns ```false``` and goes to another condition, ```(age > 10) ? "child" : "young"```. In our case the second condition returns false and so our code returns ```young```. 
+
+
+
+
