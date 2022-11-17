@@ -117,4 +117,32 @@ var BMW = new Car('BMW');
 💡 The above code will return an error since Arrow function does not have the property of a constructor i.e it cannot build an object. 
 
 
-    
+
+
+
+# 🏛 Truthy & Falsy
+
+```
+var test = "HI";
+
+if(test){
+  console.log("I am truthy");
+}else {
+  console.log("I am falsy");
+}
+```
+This above code returns: ``` I am truthy```
+
+- However,
+```
+var test = "";
+
+if(test){
+  console.log("I am truthy");
+}else {
+  console.log("I am falsy");
+}
+```
+This code return: ```I am falsy```
+
+- So, in javascript, anything accept ```false``` ```0``` ```-0``` ```0n``` ```""``` ```''``` ``` `` ``` ```null``` ```undefined``` ```Nan``` ```document.all``` will return truthy. 
