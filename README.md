@@ -314,3 +314,23 @@ var result = number.splice(1, 2, 8, 9, 10);
 console.log(number); 
 ```
 - The above code returns: ``` [ 1, 8, 9, 10, 4, 5, 6 ]```
+
+# 🏛 Array concat() method: 
+- To add two arrays we can use ```concat()``` method.
+```
+var array1 = [1, 2, 3];
+var array2 = [ 4, 5, 6];
+var result = array1.concat(array2);
+
+console.log(result); 
+```
+- The above code returns: ```[ 1, 2, 3, 4, 5, 6 ]```
+- 💡 However if we want to add more than one two arrays: 
+```
+var array1 = [1, 2, 3];
+var array2 = [ 4, 5, 6];
+var array3 = [ 7, 8, 9];
+var result = array1.concat(array2, array3);
+
+console.log(result); 
+```
