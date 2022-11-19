@@ -359,3 +359,4 @@ console.log(sum);
 ```
 - The above code returns ```6```. When the array is in the first index, ```1``` is added with ```0``` which we have set as the intial value in the end of the reduce() method. The return value of this iteration is the previousValue for the next iteration. So, in the second iteration, 1 = ```previousValue``` is added with 2 = ```currentValue```. 
 💡 ```reduce()``` method also takes in ```currentIndex``` and ```array``` (original array) as parameters. 
+
