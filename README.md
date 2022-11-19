@@ -360,3 +360,39 @@ console.log(sum);
 - The above code returns ```6```. When the array is in the first index, ```1``` is added with ```0``` which we have set as the intial value in the end of the reduce() method. The return value of this iteration is the previousValue for the next iteration. So, in the second iteration, 1 = ```previousValue``` is added with 2 = ```currentValue```. 
 💡 ```reduce()``` method also takes in ```currentIndex``` and ```array``` (original array) as parameters. 
 
+## ⭐️ Object tricks: 
+- Printing the keys and values of an objects:
+```
+var myObj = {
+  name: "Alfi",
+  age: "23",
+  gender: "male"
+};
+
+var keys = Object.keys(myObj);
+var values = Object.values(myObj);
+
+console.log(keys, values);
+```
+- If we want to get keys and values together:
+```
+var myObj = {
+  name: "Alfi",
+  age: "23",
+  gender: "male"
+};
+
+var entries = Object.entries(myObj);
+
+console.log(entries);
+```
+
+## ⭐️ Function default parameters:
+- We can set a default value to the parameter of our function incase we dont send any value to the function. 
+``` 
+function func(x = 3){
+  return x;
+  }
+console.log(func());
+```
+- The above code will print 3. But if we send ```null``` as value to the function then it will print ```null``` since ```null``` a valid to javascript.  Whereas, if we send ```undefined``` to the function then it will print the default value. 
