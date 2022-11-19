@@ -291,3 +291,26 @@ console.log(result);
 
  <img width="290" alt="Screenshot 2022-11-17 at 5 54 48 PM" src="https://user-images.githubusercontent.com/66726759/202439745-54176fe8-0401-4b25-a0b0-e86229217585.png">
 
+# 🏛 Array splice() method: 
+- If we want to remove 10 consecutive numbers in an array of length 50 from any given index, then we can easily do this task using splice.
+```
+var number = [1, 2, 3, 4, 5, 6];
+var result = number.splice(1, 2);
+
+console.log(result); 
+```
+💡 But the above code gives output: ```[2, 3]```. In the above code, the method splice(1, 2) takes in two paramters. The first parameter is the starting point of the separation and the second one denotes how many consecutive number to be deleted. So, the when we print the result we get the deleted values. To get the modified array we have to print the array itself and we can find that it has been modified. 
+```
+var number = [1, 2, 3, 4, 5, 6];
+var result = number.splice(1, 2);
+
+console.log(number); 
+```
+- However, we can also insert new values from where we are deleting values in an array using splice(). We just need to add the new values as parameters in the splice() method. 
+```
+var number = [1, 2, 3, 4, 5, 6];
+var result = number.splice(1, 2, 8, 9, 10);
+
+console.log(number); 
+```
+- The above code returns: ``` [ 1, 8, 9, 10, 4, 5, 6 ]```
