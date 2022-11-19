@@ -407,10 +407,23 @@ console.log(a);
 ```
 - The above code will print the same result for ```numbers``` and ```a``` array. But we added a value to only numbers. When we declare ```var a = numbers```, then not only they array is copied but also the address of the array. So if we change anything in numbers array then it will also change in ```a``` array. 
 - Som. if we want to only copy a seperate array then we can use spread operator. We just have to change this line  ```var a = numbers;``` to ```var a = [...numbers];```. This will give us two different results for the two arrays. 
-- 👉 We can also concat two arrays using spread operator. 
+- 👉 We can also concat arrays and objects using spread operator. 
 ```
 var numbers = [1, 2];
 var numbers2 = [3, 4];
 var result = [...numbers, ...numbers2];
 console.log(result);
 ```
+```
+var obj1 = {
+    name: "Alfi",
+    age: 23
+}
+var obj2 = {
+    gender: "male",
+    birthYear: 1998
+}
+var result = {...obj1, ...obj2};
+console.log(result);
+```
+- The above code prints: ```{ name: 'Alfi', age: 23, gender: 'male', birthYear: 1998 }```
