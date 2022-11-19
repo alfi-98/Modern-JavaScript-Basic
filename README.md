@@ -396,3 +396,14 @@ function func(x = 3){
 console.log(func());
 ```
 - The above code will print 3. But if we send ```null``` as value to the function then it will print ```null``` since ```null``` a valid to javascript.  Whereas, if we send ```undefined``` to the function then it will print the default value. 
+
+## ⭐️ Spread operator:
+```
+var numbers = [1, 2, 4, 5];
+var a = numbers;
+numbers.push(3);
+console.log(numbers);
+console.log(a);
+```
+- The above code will print the same result for ```numbers``` and ```a``` array. But we added a value to only numbers. When we declare ```var a = numbers```, then not only they array is copied but also the address of the array. So if we change anything in numbers array then it will also change in ```a``` array. 
+- Som. if we want to only copy a seperate array then we can use spread operator. We just have to change this line  ```var a = numbers;``` to ```var a = [...numbers];```. This will give us two different results for the two arrays. 
