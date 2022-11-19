@@ -334,3 +334,27 @@ var result = array1.concat(array2, array3);
 
 console.log(result); 
 ```
+# 🏛 Array map() method: 
+- ```map()``` method works the same way as a for loop does. 
+```
+var array1 = [1, 2, 3];
+
+var result = array1.map((n) => {
+    return 2 * n;
+});
+console.log(result)
+```
+- In the above code we wanted to multiply all the numbers in the array with 2. So we called the ``` map()``` method where we n represents each number in the array and returns the result. ```map()``` method doesnt change the original array so we have to store the result in a variable. 
+
+
+# 🏛 Array reduce() method: 
+- This method doesnt change the original array. This method takes two parameters previous value and current value. The value that is returned after first iteration becomes the previous value for the current iteration. 
+```
+var array1 = [1, 2, 3];
+
+var sum = array1.reduce((previousValue, currentValue) => {
+    return previousValue + currentValue
+}, 0);
+console.log(sum);
+```
+- The above code returns ```6```. When the array is in the first index, ```1``` is added with ```0``` which we have set as the intial value in the end of the reduce() method. The return value of this iteration is the previousValue for the next iteration. So, in the second iteration, 1 = ```previousValue``` is added with 2 = ```currentValue```. 
