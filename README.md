@@ -405,8 +405,8 @@ numbers.push(3);
 console.log(numbers);
 console.log(a);
 ```
-- The above code will print the same result for ```numbers``` and ```a``` array. But we added a value to only numbers. When we declare ```var a = numbers```, then not only they array is copied but also the address of the array. So if we change anything in numbers array then it will also change in ```a``` array. 
-- Som. if we want to only copy a seperate array then we can use spread operator. We just have to change this line  ```var a = numbers;``` to ```var a = [...numbers];```. This will give us two different results for the two arrays. 
+- The above code will print the same result for ```numbers``` and ```a``` array. But we added a value to only numbers. When we declare ```var a = numbers```, then not only the array is copied but also the address of the array. So if we change anything in numbers array then it will also change in ```a``` array. 
+- So, if we want to only copy a seperate array then we can use spread operator. We just have to change this line  ```var a = numbers;``` to ```var a = [...numbers];```. This will give us two different results for the two arrays. 
 - 👉 We can also concat arrays and objects using spread operator. 
 ```
 var numbers = [1, 2];
