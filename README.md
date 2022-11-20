@@ -427,3 +427,13 @@ var result = {...obj1, ...obj2};
 console.log(result);
 ```
 - The above code prints: ```{ name: 'Alfi', age: 23, gender: 'male', birthYear: 1998 }```
+- 👉 Changing data without Mutation using ```spread Operator```:
+```
+var obj1 = {
+    gender: "male",
+    birthYear: 1998
+}
+var result = {...obj1, birthYear: 2000};
+console.log(result);
+```
+
